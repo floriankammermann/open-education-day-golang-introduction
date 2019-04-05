@@ -13,7 +13,8 @@
 1. 5min Explain Webserver 
 1. 15min Create basic Webserver with example
 1. 10min Add custom response
-1. 10min Create datastructure with rivers
-1. 20min Create function which returns the river according to passed min/max length
+1. 5min Create datastructure for rivers
+1. 10min Return rivers based on the last path element
+1. 15min Create function which returns the river according to passed min/max length
 1. 20min Take parameters from Request and return rivers according to passed min/max length
 
