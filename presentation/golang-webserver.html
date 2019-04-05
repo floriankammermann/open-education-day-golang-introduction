@@ -72,7 +72,7 @@ System Engineering, Coding in golang, Automation, CI/CD
 
 * Simplicity
 * Tooling built in 
-* no Virutal Machine
+* no Virtual Machine
 * Very good parallel support (multicore)
 * Performance (memory/cpu)
 
@@ -143,9 +143,9 @@ import (
 )
 ```
 
-Go has a lot of already built in functionality.
-The `net/http` package is such built in functionality.
-It contains all the necessary stuff to create http servers and clients.
+* Go has a lot of already built in functionality.
+* The `net/http` package is such built in functionality.
+* It contains all the necessary stuff to create http servers and clients.
 
 ---
 
@@ -220,11 +220,18 @@ func main() {
 # Custom Response
 
 Implement for different path a custom response:
-* /greeting "This is a greeter"
-* /greeting/CH "This is a greeter for Switzerlan"
-* /greeting/CH/de "Grüezi"
-* /greeting/CH/fr "Bonjour"
-* /greeting/CH/it "Ciao"
+* `/greeting` "This is a greeter"
+* `/greeting/CH` "This is a greeter for Switzerlan"
+* `/greeting/CH/de` "Grüezi"
+* `/greeting/CH/fr` "Bonjour"
+* `/greeting/CH/it` "Ciao"
+
+---
+
+# Bonuspoint
+
+* create a function greet which takes the greeting text as an argument
+* use this function to map a rout to the return value
 
 ---
 
@@ -259,15 +266,33 @@ type River struct {
 # Extract the last path element and return the according river
 
 * route the path `/river/`
-* extract last path element with `path.Base(r.URL.String())`
-* get the river from the map and return name and length `fmt.Fprintf(w, "Name: %s, Length in km: %d", river.Name, river.LengthInKM)`
+* extract last path element with 
+```
+path.Base(r.URL.String())
+```
+* get the river from the map and return name and length 
+```
+fmt.Fprintf(w, "Name: %s, Length in km: %d", river.Name, river.LengthInKM)
+```
 
+---
 
+# Bonuspoint
 
+* create a json file with the rivers
+* read the json file from the code
 
+---
 
+# Pass max/min length as parameter and return the according river
 
+* `/river/?minlength=300&maxlength=500`
 
+---
+
+# Congratulations
+
+[presentation / code](https://github.com/floriankammermann/open-education-day-golang-introduction)
 
     </textarea>
     <script src="https://remarkjs.com/downloads/remark-latest.min.js">
