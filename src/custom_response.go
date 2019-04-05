@@ -15,7 +15,7 @@ func main() {
 		fmt.Fprintf(w, "This is a greeter for Switzerland")
 	})
 
-	http.HandleFunc("/greeting/CH/ch", func(w http.ResponseWriter, r *http.Request) {
+	http.HandleFunc("/greeting/CH/de", func(w http.ResponseWriter, r *http.Request) {
 		fmt.Fprintf(w, "Grüezi")
 	})
 
