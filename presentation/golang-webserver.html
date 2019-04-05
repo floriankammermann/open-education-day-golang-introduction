@@ -254,6 +254,15 @@ type River struct {
  rivers["rhein"] = River{Key: "rhein", Name: "Rhein", LengthInKM: 1238}
 ```
 
+---
+
+# Extract the last path element and return the according river
+
+* route the path `/river/`
+* extract last path element with `path.Base(r.URL.String())`
+* get the river from the map and return name and length `fmt.Fprintf(w, "Name: %s, Length in km: %d", river.Name, river.LengthInKM)`
+
+
 
 
 
