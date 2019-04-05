@@ -10,8 +10,8 @@
 1. 5min Introduction
 1. 5min golang Introduction
 1. 5min Explore LiteIDE with go hello world
-1. 10min Explain Webserver 
-1. 10min Create basic Webserver with example
+1. 5min Explain Webserver 
+1. 15min Create basic Webserver with example
 1. 10min Add custom response
 1. 10min Create datastructure with rivers
 1. 20min Create function which returns the river according to passed min/max length
