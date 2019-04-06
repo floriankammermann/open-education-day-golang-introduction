@@ -35,8 +35,13 @@ func rname(w http.ResponseWriter, r *http.Request) {
 func rlen(w http.ResponseWriter, r *http.Request) {
 	minlengthStr := r.URL.Query().Get("min")
 	maxlengthStr := r.URL.Query().Get("max")
-	minlength, _ := strconv.Atoi(minlengthStr)
-	maxlength, _ := strconv.Atoi(maxlengthStr)
+	minlength, minErr := strconv.Atoi(minlengthStr)
+	maxlength, maxErr := strconv.Atoi(maxlengthStr)
+	if minErr != nil || maxErr != nil {
+		w.WriteHeader(http.StatusBadRequest)
+		fmt.Fprint(w, "expected min and max parameters with integer values.")
+		return
+	}
 
 	for _, river := range rivers {
 		if river.LengthInKm > minlength && river.LengthInKm < maxlength {
